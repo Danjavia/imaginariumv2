@@ -183,14 +183,14 @@ var LoginForm = React.createClass({
 
                             favorites = snapshot.val();
 
-                            favorites.push( localStorage.fav );
+                            favorites.push( parseInt( localStorage.fav ) );
                         }
 
                         else {
 
                             favorites = [];
 
-                            favorites.push( localStorage.fav );
+                            favorites.push( parseInt( localStorage.fav ) );
                         }                 
 
                     }.bind( this ));
