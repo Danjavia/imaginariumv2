@@ -13,7 +13,7 @@ var Favorites = require( './favorites' );
 // Firebase area
 global.ReactFire = require('reactfire');
 global.Firebase = require('firebase');
-var RootUrl = 'https://therion.firebaseIO.com/';
+global.RootUrl = 'https://therion.firebaseIO.com/';
 
 // Analytics
 // global.Woopra = require( 'woopra' );

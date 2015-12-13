@@ -8,7 +8,7 @@ var Navbar = React.createClass({
 
 	getInitialState: function () {
 		return {
-            refUrl: "https://imaginarium.firebaseio.com",
+            refUrl: RootUrl,
             auth: null
 		};
 	},

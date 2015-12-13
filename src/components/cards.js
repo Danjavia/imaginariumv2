@@ -11,7 +11,7 @@ var Cards = React.createClass({
 
     getInitialState: function () {
         return {
-            refUrl: "https://imaginarium.firebaseio.com",
+            refUrl: RootUrl,
             authData: null
         };
     },

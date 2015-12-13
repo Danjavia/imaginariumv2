@@ -10,7 +10,7 @@ var LoginForm = React.createClass({
 
     getInitialState: function () {
         return {
-            refUrl: 'https://imaginarium.firebaseio.com' 
+            refUrl: RootUrl 
         };
     },
 
@@ -27,6 +27,8 @@ var LoginForm = React.createClass({
         
         }, function( error, authData ) {
 
+            console.log( authData );
+
             if ( error ) {
 
                 Materialize.toast( 'Login Failed!', 4000 );
@@ -39,6 +41,8 @@ var LoginForm = React.createClass({
                 woopra.identify({
                     email: authData.password.email,
                     name: authData.password.email,
+                    avatar: authData.password.profileImageURL,
+                    company: authData.password.company
                 });
 
                 // The identify code should be added before the "track()" function
@@ -125,11 +129,14 @@ var LoginForm = React.createClass({
         e.preventDefault();
 
         var ref = new Firebase( this.state.refUrl );
+        var avatar = 'http://lorempixel.com/320/320/people/' + Math.floor( ( Math.random() * 20 ) + 1 );
 
         ref.createUser({
 
             email    : this.refs.email.value.trim(),
-            password : this.refs.password.value.trim()
+            password : this.refs.password.value.trim(),
+            avatar: avatar,
+            company: 'elestore'
 
         }, function( error, userData ) {
 
@@ -150,7 +157,9 @@ var LoginForm = React.createClass({
 
                 // Woopra track identifier
                 woopra.identify({
-                    userId: userData.uid
+                    userId: userData.uid,
+                    avatar: avatar,
+                    company: 'elestore'
                 });
 
                 // The identify code should be added before the "track()" function

@@ -39,7 +39,7 @@ var CardActions = React.createClass({
 
     getInitialState: function () {
         return {
-            refUrl: "https://imaginarium.firebaseio.com",
+            refUrl: RootUrl,
             authData: null
         };
     },
@@ -205,7 +205,7 @@ var Card = React.createClass({
                 description: this.props.data.description,
                 link: this.props.data.img
             },
-            refUrl: 'https://imaginarium.firebaseio.com'
+            refUrl: RootUrl
         };
     },
 

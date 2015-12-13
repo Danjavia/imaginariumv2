@@ -23,7 +23,7 @@ var Home = React.createClass({
 	getInitialState: function () {
 		return {
 			items: [],
-			refUrl: "https://imaginarium.firebaseio.com"
+			refUrl: RootUrl
 		};
 	},
 
