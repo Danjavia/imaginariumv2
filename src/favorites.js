@@ -28,8 +28,16 @@ var Favorites = React.createClass({
 
     componentWillMount: function() {
 
-        var ref = new Firebase( this.state.refUrl + '/items' );
-        this.bindAsArray( ref, "items" );
+        var ref = new Firebase( this.state.refUrl ),
+            authData = ref.getAuth();
+
+        if ( authData && localStorage.auth )
+            location.href = '/#/favorites';
+        else
+            location.href = '/#/';
+
+        var refItems = new Firebase( this.state.refUrl + '/items' );
+        this.bindAsArray( refItems, "items" );
     }, 
 
     render: function () {
