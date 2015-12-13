@@ -134,7 +134,9 @@ var CardActions = React.createClass({
 
     download: function ( e ) {
 
-        // dataLayer.push({ 'event': 'Downloads' })
+        woopra.track( 'Download', {
+            downloaded_card: this.props.action.item
+        });
 
         ga( 'send', {
             hitType: 'event',
