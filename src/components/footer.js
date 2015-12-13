@@ -13,7 +13,7 @@ var Footer = React.createClass({
 	render: function () {
 		return (
 			<footer className="center-align">
-	            <p>Made with <i className="fa fa-heart red-text"></i> and low <i className="fa fa-clock-o"></i> by <i className="fa fa-twitter blue-text"></i><a href="http://twitter.com/danjavia">Danjavia</a></p>
+	            <p><i className="fa fa-quote-left blue-text"></i> The failure begins when ceases the force. <i className="fa fa-quote-right blue-text"></i> <br/> Made by <i className="fa fa-twitter blue-text"></i><a href="http://twitter.com/danjavia">Danjavia</a> With <i className="fa fa-heart red-text"></i></p>
 	        </footer>
 		);
 	}
