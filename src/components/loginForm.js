@@ -27,8 +27,6 @@ var LoginForm = React.createClass({
         
         }, function( error, authData ) {
 
-            console.log( authData );
-
             if ( error ) {
 
                 Materialize.toast( 'Login Failed!', 4000 );
