@@ -4,8 +4,6 @@ Improved version of test app for [comparamejor.com](http://comparamejor.com)
 
 ###Getting Started###
 
-There are two methods for getting started with this repo.
-
 Checkout this repo, install depdencies, then start the gulp process with the following:
 
 ```
