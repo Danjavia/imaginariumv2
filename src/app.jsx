@@ -11,8 +11,8 @@ var Login = require( './login' );
 var Favorites = require( './favorites' );
 
 // Firebase area
-var ReactFire = require('reactfire');
-var Firebase = require('firebase');
+global.ReactFire = require('reactfire');
+global.Firebase = require('firebase');
 var RootUrl = 'https://therion.firebaseIO.com/';
 
 // Analytics
