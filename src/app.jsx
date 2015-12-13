@@ -15,10 +15,6 @@ global.ReactFire = require('reactfire');
 global.Firebase = require('firebase');
 var RootUrl = 'https://therion.firebaseIO.com/';
 
-// Analytics
-global.Woopra = require( 'woopra' );
-global.woopra = new Woopra( 'imaginarium.danjavia.xyz' );
-
 var ua = require( 'universal-analytics' );
 
 // global variables
