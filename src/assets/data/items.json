@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Babyland",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img1.jpg",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "title": "Sun Flowers",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img2.jpg",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "title": "The Touch",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img3.jpg",
+      "link": "#"
+    },
+    {
+      "id": 4,
+      "title": "Guitar Hero",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img4.jpg",
+      "link": "#"
+    },
+    {
+      "id": 5,
+      "title": "Blue River",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img5.jpg",
+      "link": "#"
+    },
+    {
+      "id": 6,
+      "title": "Wisdom Age",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img6.jpg",
+      "link": "#"
+    },
+    {
+      "id": 7,
+      "title": "Violet Hill",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img7.jpg",
+      "link": "#"
+    },
+    {
+      "id": 8,
+      "title": "Wolf Moon",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "img": "assets/imgs/img8.jpg",
+      "link": "#"
+    }
+  ]
+}
