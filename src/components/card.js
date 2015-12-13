@@ -194,7 +194,7 @@ var CardReveal = React.createClass({
     }
 });
 
-// Home component
+// Card component
 var Card = React.createClass({
 
     getInitialState: function () {
