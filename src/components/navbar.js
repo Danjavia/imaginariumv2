@@ -55,8 +55,12 @@ var Navbar = React.createClass({
         	delete localStorage.auth;
         	this.setState({ auth: null }); 
 	        Materialize.toast( 'Your session has ended', 4000 );
+        	location = '/'; 
+	        
         }
- 
+
+        else 
+        	location = '/'; 
 	},
 
 	render: function () {

@@ -24,6 +24,8 @@ var Favorites = React.createClass({
 
         if ( authData && localStorage.auth )
             location.href = '/#/favorites'
+        else
+            location.href = '/';
     },  
 
     render: function () {
