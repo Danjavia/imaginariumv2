@@ -30,6 +30,11 @@ var LoginForm = React.createClass({
             if ( error ) {
 
                 Materialize.toast( 'Login Failed!', 4000 );
+
+                // The identify code should be added before the "track()" function
+                woopra.track( "Failure login", {
+                    email: this.refs.email.value.trim()
+                });
         
             } else {
 
