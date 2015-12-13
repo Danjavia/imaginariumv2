@@ -31,20 +31,21 @@ var Favorites = React.createClass({
         var ref = new Firebase( this.state.refUrl ),
             authData = ref.getAuth();
 
-        if ( authData && localStorage.auth )
-            location.href = '/#/favorites';
+        if ( authData && localStorage.auth ) {
+
+            var userFavs = new Firebase( this.state.refUrl + 'users/' + authData.uid + '/favorites' );
+            this.bindAsArray( userFavs, "favs" );    
+        }
+
         else
             location.href = '/#/';
-
-        var refItems = new Firebase( this.state.refUrl + '/items' );
-        this.bindAsArray( refItems, "items" );
     }, 
 
     render: function () {
         return (
             <div className="favorites">
                 <Navbar />
-                <FavoritesList data={this.state.items} />
+                <FavoritesList data={this.state.favs} />
                 <Footer />
             </div>
         );

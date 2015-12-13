@@ -46,15 +46,27 @@ var Favorite = React.createClass({
     },
 
     componentWillMount: function () {
+
+        var ref = new Firebase( this.state.refUrl + 'items/' + ( this.props.data[ '.value' ] - parseInt( 1 ) ) );
+
+        // Retrieve new posts as they are added to our database
+        ref.once( "value", function( data ) {
+            this.setState({
+                img: data.val().img,
+                title: data.val().title,
+                description: data.val().description
+            })
+        }.bind(this));
+
         $( '.materialboxed' ).materialbox();
     },
 
     render: function () {
         return (
             <li className="collection-item avatar">
-                <FavoriteImage image={this.props.data.img} />
-                <FavoriteTitle title={this.props.data.title} />
-                <FavoriteContent content={this.props.data.description} />
+                <FavoriteImage image={this.state.img} />
+                <FavoriteTitle title={this.state.title} />
+                <FavoriteContent content={this.state.description} />
             </li>
         );
     }
