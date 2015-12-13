@@ -16,7 +16,9 @@ var Firebase = require('firebase');
 var RootUrl = 'https://therion.firebaseIO.com/';
 
 // Analytics
-var Woopra = require( 'woopra' );
+global.Woopra = require( 'woopra' );
+global.woopra = new Woopra( 'imaginarium.danjavia.xyz' );
+
 var ua = require( 'universal-analytics' );
 
 // global variables
