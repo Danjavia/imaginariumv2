@@ -68,7 +68,8 @@ gulp.task('serve', function(done) {
           }
         }
       },
-      open: true
+      open: true,
+      port: 3000
     }));
 });
 
