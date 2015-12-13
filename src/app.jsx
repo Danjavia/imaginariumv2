@@ -38,19 +38,11 @@ var App = React.createClass({
   	}
 });
 
-var Page2 = React.createClass({
-	render: function () {
-		return(
-			<div>hola danjavia</div>
-		);
-	}
-})
-
 var routes = (
 	<Router history={new HashHistory}>
 	    <Route path="/" component={App}>
 	      	<Route path="login" component={Login}/>
-	      	<Route path="favorites" component={Page2}>
+	      	<Route path="favorites" component={Favorites}>
 	      	</Route>
 	      	<Route path="*" component={Home}/>
 	    </Route>
