@@ -39,10 +39,9 @@ var FavoritesList = React.createClass({
             <div className="container items-area">
                 <h1 className="center-align">Imaginarium</h1>
                 <h4 className="center-align">My Favorites</h4>
-
-                <ul className="collection">
-                    {favorites}
-                </ul>
+                
+                {this.props.data.length > 0 ? <ul className="collection">{favorites}</ul> : <h3 className="center-align">No Cards Here Yet :( <a href="/">Start One</a></h3>}
+                
             </div>
         );
     }
