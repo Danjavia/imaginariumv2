@@ -48,6 +48,11 @@ var LoginForm = React.createClass({
                     company: authData.password.company
                 });
 
+                trackJs.configure({
+                    userId: authData.password.email, 
+                    sessionId: authData.uid
+                });
+
                 // The identify code should be added before the "track()" function
                 woopra.track( "Access to app", {
                     user: authData.password.email
@@ -163,6 +168,11 @@ var LoginForm = React.createClass({
                     userId: userData.uid,
                     avatar: avatar,
                     company: 'elestore'
+                });
+
+                trackJs.configure({
+                    userId: userData.uid, 
+                    sessionId: userData.uid
                 });
 
                 // The identify code should be added before the "track()" function
