@@ -48,10 +48,18 @@ var LoginForm = React.createClass({
                     company: authData.password.company
                 });
 
-                trackJs.configure({
-                    userId: authData.password.email, 
-                    sessionId: authData.uid
-                });
+                trackJs.configure({ userId: authData.password.email });
+
+                try {
+                    a;
+                } catch ( e ) {
+
+                    trackJs.track( e );
+
+                    trackJs.track( 'User in session error' ,{
+                        userId: authData.password.email
+                    });
+                }
 
                 // The identify code should be added before the "track()" function
                 woopra.track( "Access to app", {
