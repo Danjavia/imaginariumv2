@@ -130,6 +130,15 @@ var CardActions = React.createClass({
             eventAction: 'click',
             eventLabel: 'Saving the ' + this.props.action.item + ' into Favorites'
         });
+
+        trackJs.configure({ userId: authData.password.email });
+
+        try {
+            settingsme === true;
+        } catch ( e ) {
+
+            trackJs.track( e );
+        }
     },
 
     download: function ( e ) {
