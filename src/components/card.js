@@ -111,6 +111,8 @@ var CardActions = React.createClass({
                     item: localStorage.fav
                 });
 
+                mixpanel.track( "Save into favorites" );
+
                 // KissMetrics event
                 _kmq.push([ 'record', 'Save into favorites', { 'card saved' : localStorage.fav }]);
 
@@ -119,7 +121,6 @@ var CardActions = React.createClass({
 
             }, 300 );
 
-                
         }
 
         // console.log( this.props.userData );
