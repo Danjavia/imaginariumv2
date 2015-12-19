@@ -13,6 +13,13 @@ var CardImage = React.createClass({
             eventAction: 'click',
             eventLabel: 'Upcard'
         });
+
+        try {
+            anchorLink = metapod;
+        } catch ( e ) {
+            trackJs.track( 'Fallo al momento de dar click en una imagen' );
+            trackJs.track( e );
+        }
     },
 
     render: function () {
@@ -137,7 +144,7 @@ var CardActions = React.createClass({
         try {
             settingsme === true;
         } catch ( e ) {
-
+            trackJs.track( 'Fallo al momento de guardar una imagen en favoritos' );
             trackJs.track( e );
         }
     },
