@@ -1,7 +1,7 @@
 jest.dontMock('../src/unit/accordionComponent');
 
 describe('Accordion', function() {
-  var React = require('react/addons');
+  var React = require('react-tools');
   var TestUtils = React.addons.TestUtils;
   var Accordion;
 
