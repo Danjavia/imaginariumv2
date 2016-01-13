@@ -118,11 +118,6 @@ var CardActions = React.createClass({
                     item: localStorage.fav
                 });
 
-                mixpanel.track( "Save into favorites" );
-
-                // KissMetrics event
-                _kmq.push([ 'record', 'Save into favorites', { 'card saved' : localStorage.fav }]);
-
                 // Display message
                 Materialize.toast( 'Saved into favorites.', 4000 );
 

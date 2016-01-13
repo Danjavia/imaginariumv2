@@ -48,9 +48,6 @@ var Navbar = React.createClass({
                 user: authData.password.email
             });
 
-            // KissMetrics event
-            _kmq.push([ 'record', 'Exit of application' ]);
-
         	ref.unauth();
         	delete localStorage.auth;
         	this.setState({ auth: null }); 
@@ -65,9 +62,9 @@ var Navbar = React.createClass({
 
 	render: function () {
 		return (
-			<nav className="indigo darken-3">
+			<nav className="red darken-4">
 	            <div className="nav-wrapper container">
-	                <a href="#/" className="brand-logo">Imaginarium</a>
+	                <a href="#/" className="brand-logo">Woopra Demo</a>
 	                <ul className="right hide-on-med-and-down app-menu">
 	                    <li><a href="#/">Home</a></li>
 	                    <li><a href="#/login">My Favorites</a></li>

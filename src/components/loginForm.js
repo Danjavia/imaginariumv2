@@ -62,9 +62,6 @@ var LoginForm = React.createClass({
                     user: authData.password.email
                 });
 
-                // KissMetrics event
-                _kmq.push([ 'record', 'Access to app', { 'userId' : authData.uid }]);
-
                 // intercom code
                 window.Intercom( 'boot', {
                     app_id: "y36fm6q4",
@@ -183,9 +180,6 @@ var LoginForm = React.createClass({
                 woopra.track( "Access to app", {
                     userId: userData.uid
                 });
-
-                // KissMetrics event
-                _kmq.push(['record', 'Access to app', { 'userId' : userData.uid }]);
 
                 if ( document.getElementById( 'loginModal' )  ) {
 
